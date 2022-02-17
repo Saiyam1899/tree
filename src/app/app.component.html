@@ -1,0 +1,10 @@
+<h1>Folder Structure</h1>
+<button (click)="ontoggle()">Add to Folder Structure</button>
+<br />
+
+
+<div *ngFor="let child of nodes ; let i=index">
+  {{child.name}}
+   <app-tree-node (InputFeild)="onInputEvent($event)"></app-tree-node>
+</div>
+<app-edit (InputFeild)="onInputEvent($event)" *ngIf="active"></app-edit>
